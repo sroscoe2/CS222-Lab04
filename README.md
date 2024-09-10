@@ -85,8 +85,8 @@ mechanisms related to subclassing.
 ## 3. Activities 
 
 You will explore these concepts by completing a Java program that
-simulates a basic weekly payroll reporting system for the Cinco
-Corporation. Every employee has an employee ID, a name (first and last),
+simulates a basic weekly payroll reporting system for a
+corporation. Every employee has an employee ID, a name (first and last),
 and a title. Further, there are two types of employees:
 
 -   Salaried employees (type: `"Salary"`) – Salaried employees have a base annual salary,
@@ -99,10 +99,10 @@ and a title. Further, there are two types of employees:
     employees do not receive any benefit allowance. Further, there are
     two types of hourly employees.
 
-    -   Staff employees (type: `"Staff"`) are directly employed by Cinco and are subject
+    -   Staff employees (type: `"Staff"`) are directly employed by the company and are subject
         to a 15% income tax rate.
 
-    -   Temporary employees (type: `"Temporary"`) are not directly employed by Cinco, but
+    -   Temporary employees (type: `"Temporary"`) are not directly employed by the company, but
         instead are contracted through a third-party temp agency who is
         responsible for collecting taxes (thus no taxes are taken from
         their gross pay).
@@ -115,7 +115,7 @@ Diagram.  A UML (Unified Modeling Language) Diagram is a graphical
 representation of classes and their relationships.  
 <p align="center">
 <img src="images/ProjectUML.png" 
-     alt="UML Diagram of a potential design for the Cinco Corporation payroll system" 
+     alt="UML Diagram of a potential design for the company payroll system" 
      width="90%"/>
 </p>
 
@@ -171,12 +171,12 @@ relevant subclass(es) to complete the program.
 -   To check your work, a text file containing the expected output has
     been provided in the project (see `output/expectedOutput.txt`)
 
-***Eclipse Tip***: Many of the common programming tasks when dealing with
+***VS Code Tip***: Many of the common programming tasks when dealing with
 objects can be automated by your IDE. For example: once you have
 designed the state (variables) of your class, you can automatically
 generate the boilerplate getters, setters, and constructors: when
-focused on your class, click "Source" then "Generate Getters
-and Setters" or "Generate Constructors using Fields."
+in the editor for your class, right-click, then click "Source Action" then "Generate Getters
+and Setters" or "Generate Constructors..."
 
 ***Java Note***: In a subclass, you *must* invoke a constructor in the
 superclass and it must be done first. This rule is so that classes
@@ -208,14 +208,13 @@ as necessary.
 
 ### 3.3 Adding an Interface
 
-Cinco Corporation also has suppliers that they purchase supplies and
+The company also has suppliers that they purchase supplies and
 parts from to build their products. Suppliers have a company name and an
 amount due, and so need to be paid, but they are not employees. However,
 the payroll department would like to have a common interface across all
 entities/objects in their system that are, in some way, payable.
 
-1.  Create an `interface` (in Eclipse: right click the package
-    then "new" then "Interface") called `Payable`. Identify a
+1.  Create an `interface` (in VS Code: `Cmd+shift+P`, type `new java file`, select `Java: New Java File`, then select "Interface") called `Payable`. Identify a
     single method in this interface that returns the (net) amount
     payable
 
@@ -232,31 +231,4 @@ errors and completely debug your programs.
 * Compress your Lab project to a zip file and name it `CS222-Lab04smc1` where `smc1` is YOUR SMC username.
 * Submit the zip file to Canvas. 
 
-### Advanced Activity (Optional) 
 
-1.  The `PayrollReport` class uses an `ArrayList` to hold instances of 
-    `Employee` objects. When it generates
-    the report, it does so in the order that the instances were parsed
-    from the data file. Change this so that the payroll report prints in
-    order of the total net pay in decreasing order.
-
-2.  Unified Modeling Language (UML) is a common tool in Software
-    Engineering that provides a visualization of the relationships
-    between software components (subsystems, components, classes,
-    workflows, use cases, etc.). Sometimes design of systems is done in
-    UML and then tools can automatically generate Java (or other
-    language) code conforming to the design. Conversely, UML diagrams
-    can be automatically generated
-    from an existing code base using various tools. In this exercise you
-    will familiarize yourself with UML and use such a tool to generate a
-    UML diagram for your design.
-
-    -   Read the following tutorial on using UML for class diagrams:
-        <http://www.ibm.com/developerworks/rational/library/content/RationalEdge/sep04/bell/>
-
-    -   Install an Eclipse plugin for UML and generate a UML diagram for your project. We have provided a recommendation and instructions here: https://github.com/cbourke/ComputerScienceII/blob/master/resources/uml.md
-
-
-## 5. Expected Output
-
-See [the text expected output](https://github.com/sroscoe2/CSCE156-Lab04/blob/master/output/expectedOutput.txt) or [the expected ouputs file](https://github.com/sroscoe2/CSCE156-Lab04/blob/master/Lab4ExpectedOutputs.pdf) for additional information.
